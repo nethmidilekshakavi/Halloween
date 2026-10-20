@@ -80,26 +80,20 @@
         .btn.g{color:#ffe2c0;background:transparent;border:1.5px solid #e7a53a}
         .btn.g:hover{background:rgba(231,165,58,.12)}
         .btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
-        .candle{position:absolute;bottom:6%;width:24px;border-radius:3px 3px 1px 1px;background:linear-gradient(90deg,#d9c79a,#fff6dc 45%,#e9d8ad);box-shadow:0 0 22px rgba(255,200,100,.22)}
-        .candle::before{content:"";position:absolute;left:50%;top:-27px;width:13px;height:24px;margin-left:-6.5px;border-radius:50% 50% 50% 50%/62% 62% 38% 38%;
-          background:radial-gradient(ellipse at 50% 75%,#fff2b8,#ffb030 50%,#ff6a10 85%);filter:drop-shadow(0 0 10px #ff9a2e);animation:cf .8s ease-in-out infinite alternate}
-        @keyframes cf{from{transform:scale(1,1) rotate(-3deg)}to{transform:scale(.88,1.12) rotate(3deg)}}
-        .candle.c1{left:3vw;height:80px}.candle.c2{left:19vw;height:52px}.candle.c3{right:19vw;height:58px}.candle.c4{right:3vw;height:96px}
         .pk{position:absolute;bottom:5%;animation:pglow 2.6s ease-in-out infinite}
         .pk.l1{left:7vw;width:clamp(72px,10vw,124px)}.pk.l2{left:24vw;width:clamp(44px,6vw,70px);bottom:4%;animation-delay:-1s}
         .pk.r1{right:7vw;width:clamp(72px,10vw,124px);animation-delay:-.6s}.pk.r2{right:24vw;width:clamp(44px,6vw,70px);bottom:4%;animation-delay:-1.6s}
         @keyframes pglow{0%,100%{filter:drop-shadow(0 0 14px rgba(255,110,20,.55))}50%{filter:drop-shadow(0 0 28px rgba(255,150,30,.95))}}
         @media (max-width:640px){
-          .candle.c2,.candle.c3,.pk.l2,.pk.r2{display:none}
+          .pk.l2,.pk.r2{display:none}
           .pk.l1{left:3vw;width:24vw}.pk.r1{right:3vw;width:24vw}
-          .candle.c1{left:31vw}.candle.c4{right:31vw}
           .ghost{right:-16px;width:54px}
         }
         .ember{position:fixed;bottom:-10px;width:5px;height:5px;border-radius:50%;background:#ffb347;box-shadow:0 0 8px 2px #ff9a2e;z-index:9;pointer-events:none;opacity:0;animation:rise linear infinite}
         @keyframes rise{0%{transform:translateY(0);opacity:0}15%{opacity:.9}100%{transform:translateY(-105vh) translateX(30px);opacity:0}}
         .pop{position:fixed;z-index:20;font-size:22px;pointer-events:none;animation:pop 1.5s ease-out forwards}
         @keyframes pop{from{transform:translate(-50%,0) scale(.6);opacity:1}to{transform:translate(calc(-50% + var(--dx)),-150px) scale(1.2);opacity:0}}
-        @media (prefers-reduced-motion:reduce){.ember,.fall,.ghost,.candle::before,.pk{animation:none}.card>*{opacity:1;transform:none;animation:none!important}}
+        @media (prefers-reduced-motion:reduce){.ember,.fall,.ghost,.pk{animation:none}.card>*{opacity:1;transform:none;animation:none!important}}
     </style>
 </head>
 <body>
@@ -162,7 +156,6 @@
         <svg class="pk l2" viewBox="0 0 200 170" aria-hidden="true"><use href="#pkSym"/></svg>
         <svg class="pk r1" viewBox="0 0 200 170" aria-hidden="true"><use href="#pkSym"/></svg>
         <svg class="pk r2" viewBox="0 0 200 170" aria-hidden="true"><use href="#pkSym"/></svg>
-        <div class="candle c1"></div><div class="candle c2"></div><div class="candle c3"></div><div class="candle c4"></div>
     </div>
 </main>
 <script>
